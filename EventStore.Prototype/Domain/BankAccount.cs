@@ -29,6 +29,11 @@
             Transactions.Add(newTransaction);
             CurrentBalance -= @event.Amount;
         }
+
+        public override string ToString()
+        {
+            return string.Format("AccountName: {0} - CurrentBalance: {1}", Name, CurrentBalance.ToString("F2"));
+        }
     }
 }
 
